@@ -4,30 +4,48 @@ export const metadata = {
 };
 
 const features = [
+
   {
-    title: "Espace par chapitre",
-    description: "Organisez vos contenus pédagogiques chapitre par chapitre, pour que chaque élève s'y retrouve facilement.",
+    title: "Organisation des chapitres",
+    description: "Des chapitres rangés chronologiquement et par thème, pour que chaque élève s'y retrouve facilement.",
+    image: "/features/tablist.png",
   },
   {
-    title: "Suivi de la progression",
-    description: "Visualisez en un coup d'œil l'avancement de chaque élève et identifiez rapidement qui a besoin d'aide.",
+    title: "Documents ",
+    description: "Vos élèves retrouvent tous les documents que vous proposez (pdf, multimédia, python, etc.). Un lecteur pdf est intégré à l'application pour une expérience fluide et sans distraction.",
+    image: "/features/documents.png",
   },
   {
-    title: "Exercices et quiz",
-    description: "Proposez des exercices interactifs et des quiz auto-corrigés directement intégrés à vos chapitres.",
+    title: "Quizz",
+    description: "Les quizzs peuvent être construits avec l'aide de l'IA. L'insertion d'images est rapide. Ils peuvent être paramétrés en mode évaluation ou en mode entraînement",
+    image: "/features/quizz.png",
   },
   {
-    title: "Web et mobile",
-    description: "Vos élèves retrouvent leur espace partout, en classe comme à la maison, sur ordinateur ou smartphone.",
+    title: "FlashCards",
+    description: "Vos élèves peuvent utiliser vos flashcards pour réviser leurs connaissances. Elles peuvent être créées avec l'aide de l'IA. L'insertion d'images est rapide.",
+    image: "/features/flashcard.png",
   },
   {
-    title: "Gestion de classe",
-    description: "Ajoutez ou retirez des élèves, gérez les accès et organisez votre classe depuis un espace dédié.",
+    title: "Cloud",
+    description: "Vos élèves disposent d'un espace de stockage en ligne pour sauvegarder leurs travaux et vous les soumettre. Vous avez la possibilité de répondre à leurs soumissions et de les annoter directement depuis l'application.",
+    image: "/features/cloud.png",
   },
   {
-    title: "Contenus enrichis",
-    description: "Texte, formules mathématiques, documents, vidéos : composez des chapitres complets et variés.",
+    title: "FlashCards élèves",
+    description: "Vos élèves ont la possibilité de scanner leur FlashCards papiers pour les retrouver sur l'application.",
+    image: "/features/revisions.png",
   },
+  {
+    title: "Poly de cours complété à la main",
+    description: "Vos élèves ont la possibilité de scanner leur poly de cours complété à la main pour le retrouver sur l'application. ",
+    image: "/features/docComplete.png",
+  },
+    {
+    title: "Espace de connexion ",
+    description: "Les identifiants de connexion sont les mêmes sur l'application mobile et sur le web, pour une expérience fluide et sans interruption.",
+    image: "/features/login.png",
+  },
+
 ];
 
 export default function Fonctionnalites() {
@@ -41,10 +59,16 @@ export default function Fonctionnalites() {
         et offre aux élèves un espace clair pour apprendre à leur rythme.
       </p>
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {features.map((feature) => (
-          <div key={feature.title} className="rounded-2xl border border-border bg-surface p-6">
+        {features.map((feature, i) => (
+          <div key={i} className="rounded-2xl border border-border bg-surface p-6 flex flex-col justify-between">
             <h2 className="text-lg font-semibold text-text">{feature.title}</h2>
             <p className="mt-2 text-sm text-muted">{feature.description}</p>
+            <img
+            style={{ maxHeight: "600px", objectFit: "contain" }}
+              src={feature.image}
+              alt={feature.title}
+              className="mt-4 w-full "
+            />
           </div>
         ))}
       </div>

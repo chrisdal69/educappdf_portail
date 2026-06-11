@@ -3,15 +3,18 @@ import Link from "next/link";
 const steps = [
   {
     title: "Inscrivez votre classe",
-    description: "Créez votre compte enseignant et votre classe en quelques minutes, sans engagement.",
+    description:
+      "Créez votre compte enseignant et votre classe en quelques minutes, sans engagement.",
   },
   {
     title: "Invitez vos élèves",
-    description: "Partagez un code d'accès : chacun retrouve son espace personnel sur web et mobile.",
+    description:
+      "Partagez un code d'accès : chacun retrouve son espace personnel sur web et mobile.",
   },
   {
-    title: "Suivez la progression",
-    description: "Consultez les résultats, organisez vos contenus par chapitre et gagnez du temps au quotidien.",
+    title: "Insérer votre premier chapitre",
+    description:
+      "Utilisez la plateforme web pour créer votre premier chapitre : ajoutez vos cours, QCM, flashcards et vidéos pédagogiques en quelques clics.",
   },
 ];
 
@@ -22,10 +25,18 @@ export default function Home() {
         <h1 className="text-4xl font-bold tracking-tight text-text sm:text-5xl">
           La plateforme qui simplifie la vie de votre classe
         </h1>
-        <p className="max-w-2xl text-lg text-muted">
-          EducApp réunit enseignants et élèves dans un espace pédagogique unique,
-          accessible sur web et mobile — exercices, suivi, contenus par chapitre.
-        </p>
+        <div className="mt-0 grid gap-8 sm:grid-cols-2">
+          <p className="max-w-2xl text-lg text-muted border rounded-lg border-border bg-surface p-4">
+            Offrir à vos élèves un espace numérique pour retrouver tous vos
+            cours, QCM, flashcards et vidéos pédagogiques dans une seule
+            application pour réviser efficacement partout et à tout moment
+          </p>
+          <p className="max-w-2xl text-lg text-muted border rounded-lg border-border bg-surface p-4 flex items-center">
+            Offrir à vos élèves une application mobile pour réviser efficacement
+            partout et à tout moment
+          </p>
+        </div>
+
         <div className="aspect-video w-full max-w-3xl overflow-hidden rounded-2xl border border-border bg-bg2">
           <div className="flex h-full items-center justify-center text-sm text-muted">
             Vidéo de présentation à venir
@@ -54,11 +65,16 @@ export default function Home() {
           </h2>
           <div className="mt-10 grid gap-8 sm:grid-cols-3">
             {steps.map((step, index) => (
-              <div key={step.title} className="rounded-2xl border border-border p-6">
+              <div
+                key={step.title}
+                className="rounded-2xl border border-border p-6"
+              >
                 <span className="text-sm font-semibold text-accent">
                   Étape {index + 1}
                 </span>
-                <h3 className="mt-2 text-lg font-semibold text-text">{step.title}</h3>
+                <h3 className="mt-2 text-lg font-semibold text-text">
+                  {step.title}
+                </h3>
                 <p className="mt-2 text-sm text-muted">{step.description}</p>
               </div>
             ))}
@@ -71,7 +87,8 @@ export default function Home() {
           Prêt à essayer EducApp avec votre classe ?
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-muted">
-          Démarrez gratuitement, sans carte bancaire. Vous choisirez votre formule à la fin de la période d'essai.
+          Démarrez gratuitement, sans carte bancaire. Vous choisirez votre
+          formule à la fin de la période d'essai.
         </p>
         <Link
           href="/inscription"
