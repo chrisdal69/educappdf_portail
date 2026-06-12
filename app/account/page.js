@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { portailFetch, formatSize } from "@/utils/api";
 
 const CONFIRM_PHRASE = "JE VEUX SUPPRIMER CETTE CLASSE";
-const CONFIRM_ACCOUNT_PHRASE = "JE VEUX SUPPRIMER MON COMPTE";
+const CONFIRM_ACCOUNT_PHRASE = "JE VEUX SUPPRIMER MON COMPTE ADMIN";
 
 export default function Account() {
   const router = useRouter();

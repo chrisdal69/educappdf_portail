@@ -79,6 +79,13 @@ export default function Login() {
         >
           {loading ? "Connexion…" : "Se connecter"}
         </button>
+
+        <p className="text-center text-xs text-muted pt-2">
+          Pas encore de compte ?{" "}
+          <a href="/inscription" className="text-accent hover:underline">
+            S&apos;inscrire gratuitement
+          </a>
+        </p>
       </form>
     </section>
   );
