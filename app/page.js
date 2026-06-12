@@ -23,16 +23,16 @@ export default function Home() {
     <>
       <section className="mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 py-20 text-center">
         <h1 className="text-4xl font-bold tracking-tight text-text sm:text-5xl">
-          La plateforme qui simplifie la vie de votre classe
+          La plateforme qui permet offrir à vos élèves : 
         </h1>
         <div className="mt-0 grid gap-8 sm:grid-cols-2">
           <p className="max-w-2xl text-lg text-muted border rounded-lg border-border bg-surface p-4">
-            Offrir à vos élèves un espace numérique pour retrouver tous vos
+            Un espace numérique pour retrouver tous vos
             cours, QCM, flashcards et vidéos pédagogiques dans une seule
             application pour réviser efficacement partout et à tout moment
           </p>
           <p className="max-w-2xl text-lg text-muted border rounded-lg border-border bg-surface p-4 flex items-center">
-            Offrir à vos élèves une application mobile pour réviser efficacement
+            Une application mobile pour réviser efficacement
             partout et à tout moment
           </p>
         </div>
