@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 const links = [
+  { href: "/objectifs", label: "Objectifs" },
+  { href: "/exemples", label: "Exemples" },
   { href: "/fonctionnalites", label: "Fonctionnalités" },
   { href: "/tarifs", label: "Tarifs" },
-  { href: "/a-propos", label: "À propos" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -15,9 +16,9 @@ export default function Nav() {
           EducApp
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
-          {links.map((link) => (
+          {links.map((link, i) => (
             <Link
-              key={link.href}
+              key={i}
               href={link.href}
               className="text-sm text-text transition-colors hover:text-accent"
             >
@@ -29,7 +30,13 @@ export default function Nav() {
           href="/inscription"
           className="rounded-full bg-accent px-5 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
         >
-          Commencer gratuitement
+          S'inscrire gratuitement
+        </Link>
+                <Link
+          href="/login"
+          className="rounded-full bg-accent px-5 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+        >
+          Se connecter
         </Link>
       </div>
     </header>
