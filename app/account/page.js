@@ -54,7 +54,7 @@ export default function Account() {
   function handleLogout() {
     localStorage.removeItem("portail_token");
     localStorage.removeItem("portail_user");
-    router.replace("/login");
+    router.replace("/");
   }
 
   // --- Création ---
